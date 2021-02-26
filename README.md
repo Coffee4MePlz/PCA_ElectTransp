@@ -15,4 +15,4 @@ The data is in the file *"IET.LUMO.dhd.LL.HH.BL.dist.dat"*
 
 ## Results 
 
-![Biplot of components 1 and 2](https://github.com/Coffee4MePlz/PCA_ElectTransp/P1P2_plot.png "Biplot of components 1 and 2")
+![Biplot of components 1 and 2](https://github.com/Coffee4MePlz/PCA_ElectTransp/blob/master/P1P2%20_plot.png "Biplot of components 1 and 2")
