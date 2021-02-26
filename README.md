@@ -13,6 +13,14 @@ The data is in the file *"IET.LUMO.dhd.LL.HH.BL.dist.dat"*
 
 ## The Method
 
+Importance of components:
+|                        | PC1  |  PC2 |   PC3  |  PC4  |   PC5  |   PC6 |    PC7 |
+| ----------------------:|:----:|:-----| :-----:|:-----:|:-------:|:-----:|:------:|
+| Standard deviation     | 1.6842 |1.1103 |1.0153 |0.9509 |0.69169 |0.64736 |0.31355|
+| Proportion of Variance | 0.4052 |0.1761 |0.1472 |0.1292 |0.06835 |0.05987 |0.01405|
+| Cumulative Proportion  | 0.4052 |0.5813 |0.7286 |0.8577 |0.92609 |0.98595 |1.00000|
+
+
 ## Results 
 
 ![Biplot of components 1 and 2](https://github.com/Coffee4MePlz/PCA_ElectTransp/blob/master/P1P2%20_plot.png "Biplot of components 1 and 2")
