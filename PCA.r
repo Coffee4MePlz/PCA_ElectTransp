@@ -4,7 +4,7 @@ center_scale <- function(x) {
 }
 Save_Plots <- function(x=1,y=2) {
     P<-ggbiplot(PCA_Dat, choices= c(x,y), ellipse=TRUE, groups=Dat[1:101,1])
-name <- sprintf("P%iP%i _plot", x,y)
+name <- sprintf("P%iP%i _plot.png", x,y)
 png(name)
 print(P)
 dev.off()
@@ -47,4 +47,6 @@ Save_Plots(1,2)
 Save_Plots(2,3)
 
 print("...done")
+
+
 
