@@ -1,19 +1,19 @@
 # Principal Component Analysis (PCA) for Electron Transport Data
-This is an example of application of Principal component analysis to Electron transport data. It was developed by me under supervision of Prof. Luis Rego at my home university the Universidade Federal de Santa Catarina (UFSC), during my undergraduate research in data treatment methods for Molecular Dynamics. This is only a small piece of our work, and if you are interested in what we are currently researching please visit our lab page: [Dynemol](http://luisrego.sites.ufsc.br/)
+This is an example of an application of Principal component analysis to Electron transport data. It was developed by me under the supervision of Prof. Luis Rego at my home university the Universidade Federal de Santa Catarina (UFSC), during my undergraduate research in data treatment methods for Molecular Dynamics. This is only a small piece of our work, and if you are interested in what we are currently researching please visit our lab page: [Dynemol](http://luisrego.sites.ufsc.br/)
 
 
 ## The Data source and PCA usage
-Our data was manly produced here at our laboratory by simulations of Double-Linker Sensitizers interaction with a surface. We we're interested in how these charged structures were transfering electrons (charge) when they connected to a surface (see more on the following paper - I will post the link as soon as published). We ran a PCA on the data to identify wich variables were the most important (statistically). 
+Our data was mainly produced here at The Department of Physics, Chemistry, Astronomy of the U. Delaware and U. Rutgers, together with our laboratory by simulations of Double-Linker Sensitizers interaction with a surface. We were interested in how these charged structures were transferring electrons (charge) when they connected to a surface (The results are discussed minutely on the [following paper](https://pubs.acs.org/doi/abs/10.1021/acs.jpcc.0c11299) ). We ran a PCA on the data to identify which variables were the most important (statistically). 
 
-To be fair, this is not what PCA is doing. It does **not** find the most relevant variable, but more exactly it finds the most relevant **combination** of variables, in you data set. W
+To be fair, this is not what PCA is doing. It does **not** find the most relevant variable, but more exactly it finds the most relevant **combination** of variables, in your data set. W
 
-In this case, we were particularly intersted in which variables were determining the speed in wich the eletrons were flowing to the interface between the molecule and the surface. We only measured variables that were dependent of the geometry of the molecule: angles, distances, and torsions. 
+In this case, we were particularly interested in which variables were determining the speed at which the electrons were flowing to the interface between the molecule and the surface. We only measured variables that were dependent on the geometry of the molecule: angles, distances, and torsions. 
 
 The data is in the file *"IET.LUMO.dhd.LL.HH.BL.dist.dat"*
 
 ## The Method
 
-PCA is mainly a dimension reduction method for raw data. It is mostly used when we wish to know which is the most important direction in a vector field, i.e. which single direction in your data matrix (interpreted as a vector field) is the one that preserves most of the information given. In linear algebra terms: PCA gives you the eigenvectors associated with the greatests eigenvalues. Since PCA is used in a wide variety of data, the data matrix may not be squared, but even then the PCA is garanteed to exists, since every matrix (either squared or not) can be decomposed in a singular value decomposition:
+PCA is mainly a dimension reduction method for raw data. It is mostly used when we wish to know which is the most important direction in a vector field, i.e. which single direction in your data matrix (interpreted as a vector field) is the one that preserves most of the information given. In linear algebra terms: PCA gives you the eigenvectors associated with the greatest eigenvalues. Since PCA is used in a wide variety of data, the data matrix may not be squared, even then the PCA is guaranteed to exists, since every matrix (either squared or not) can be decomposed in a singular value decomposition:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=X&space;=&space;U&space;\Sigma&space;W^T" target="_blank"><img src="https://latex.codecogs.com/gif.latex?X&space;=&space;U&space;\Sigma&space;W^T" title="X = U \Sigma W^T" /></a>
 
@@ -39,9 +39,9 @@ And the Principal Components (vectors) can be calculated by direct matrix multip
 
 ## Results 
 
-The following is a Biplot, it is a plot of the two main PCA vectors, and all other entries in accordance to them. The data here is separated in two groups, a fast one and slow one, with the boundary being the median of the time for IET to reach 0.3 (Interfacial electron transfer), physically the IET means that most of the charge (about 70%) has been transferred to the surface already. Therefore we divided the data as: fast < 32.5 = median of IET < slow 
+The following is a Biplot, it is a plot of the two main PCA vectors, and all other entries in accordance with them. The data here is separated into two groups, a fast one and a slow one, with the boundary being the median of the time for IET to reach 0.3 (Interfacial electron transfer), physically the IET means that most of the charge (about 70%) has been transferred to the surface already. Therefore we divided the data as: fast < 32.5 = median of IET < slow 
 
 ![Biplot of components 1 and 2](https://github.com/Coffee4MePlz/PCA_ElectTransp/blob/master/P1P2%20_plot.png "Biplot of components 1 and 2")
 
 
-By a direct look at the Biplot, one can see that mostly IET and dhd favour the 1st PC, and LL and LUMO are contrary to it. Similarly IET and BL favour PC2, while HH and dist are contrary. Also, our data is relatively well separated by our time criterion, since there is a small overlap of the ellipses (remember they are centered in their "center of mass"). We can then conclude that IET, HH, LUMO, and LL are the main players in separating the data via the time criterion. If we were to develop a machine learning algorithm for optimization here, we would like for it to follow these parameters first, so it can get to the best results faster. 
+By a direct look at the Biplot, one can see that IET and dhd favor mostly the 1st PC, and LL and LUMO are contrary to it. Similarly, IET and BL favor PC2, while HH and dist are contrary to it. Also, our data is relatively well separated by our time criterion, since there is a small overlap of the ellipses (remember they are centered in their "center of mass"). We can then conclude that IET, HH, LUMO, and LL are the main players in separating the data via the time criterion. If we were to develop a machine learning algorithm for optimization here, we would like for it to follow these parameters first, so it can get to the best results faster. 
