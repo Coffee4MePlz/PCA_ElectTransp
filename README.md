@@ -9,7 +9,11 @@ To be fair, this is not what PCA is doing. It does **not** find the most relevan
 
 In this case, we were particularly interested in which variables were determining the speed at which the electrons were flowing to the interface between the molecule and the surface. We only measured variables that were dependent on the geometry of the molecule: angles, distances, and torsions. 
 
-The data is in the file *"IET.LUMO.dhd.LL.HH.BL.dist.dat"*
+The data is in the file *"IET.LUMO.dhd.LL.HH.BL.dist.dat"* Such variables are represented on the following image
+
+[!Variables for MM](https://github.com/Coffee4MePlz/PCA_ElectTransp/blob/master/DoubleLinkerMM "Variables for MM")
+
+This image is available on the cited paper.
 
 ## The Method
 
