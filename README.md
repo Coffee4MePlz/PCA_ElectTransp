@@ -11,7 +11,7 @@ In this case, we were particularly interested in which variables were determinin
 
 The data is in the file *"IET.LUMO.dhd.LL.HH.BL.dist.dat"* Such variables are represented on the following image
 
-[!Variables for MM](https://github.com/Coffee4MePlz/PCA_ElectTransp/blob/master/DoubleLinkerMM "Variables for MM")
+![Variables for MM](https://github.com/Coffee4MePlz/PCA_ElectTransp/blob/master/DoubleLinkerMM.png "Variables for MM")
 
 This image is available on the cited paper.
 
